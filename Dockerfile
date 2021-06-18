@@ -50,4 +50,4 @@ RUN chmod +x /Ar.sh
 RUN pip install python-telegram-bot
 COPY bot.py /bot.py
 
-CMD [ "python","/bot.py" ]
+CMD [ "python3","/bot.py" ]
