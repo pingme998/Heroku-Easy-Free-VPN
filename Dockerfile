@@ -11,7 +11,8 @@ RUN apt install python3 -y
 COPY wwwroot.tar.gz /wwwroot/wwwroot.tar.gz
 COPY conf/ /conf
 COPY entrypoint.sh /entrypoint.sh
-
+RUN mkdir /.config
+RUN mkdir /.config/rclone
 RUN chmod +x /entrypoint.sh
 #CMD /entryentryp
 #Aria2rclone
