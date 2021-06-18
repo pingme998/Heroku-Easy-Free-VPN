@@ -49,5 +49,7 @@ RUN chmod +x /Ar.sh
 #PYTHON TG BOT
 RUN pip install python-telegram-bot
 COPY bot.py /bot.py
-
+RUN rclone version
+RUN wget -nc $CONFIG_FILE_IN_URL -O '/.config/rclone/rclone.conf'
+#RUN wget '$CONFIG_FILE_IN_URL' -O '/.config/rclone/rclone.conf'
 CMD [ "python3","/bot.py" ]
