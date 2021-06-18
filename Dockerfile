@@ -15,19 +15,19 @@ COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 #CMD /entryentryp
 #Aria2rclone
-RUN apt update -y  && \
-RUN apt install curl -y  && \
-RUN apt install unrar -y  && \
-RUN apt install unzip -y  && \
-RUN curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip && \
-RUN unzip rclone-current-linux-amd64.zip && \
-RUN cp /rclone-*-linux-amd64/rclone /usr/bin/ && \
-RUN chown root:root /usr/bin/rclone && \
-RUN chmod 755 /usr/bin/rclone && \
-RUN apt install aria2 -y && \
-RUN apt install wget -y && \
-RUN apt install pip -y && \
-RUN pip install jupyter && \
+#RUN apt update -y  && \
+RUN apt install curl -y 
+RUN apt install unrar -y 
+RUN apt install unzip -y  
+RUN curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip 
+RUN unzip rclone-current-linux-amd64.zip 
+RUN cp /rclone-*-linux-amd64/rclone /usr/bin/
+RUN chown root:root /usr/bin/rclone 
+RUN chmod 755 /usr/bin/rclone 
+RUN apt install aria2 -y 
+RUN apt install wget -y 
+RUN apt install pip -y 
+RUN pip install jupyter
 RUN pip install voila && \
     pip install ipywidgets && \
     pip install widgetsnbextension && \
