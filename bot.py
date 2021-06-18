@@ -1,5 +1,6 @@
 from telegram import *
 from telegram.ext import *
+import os
 
 
 bot = Bot("1669913040:AAHZ6Wl5SiWiUuyA8QvlJ55oadXZeYmRGQ0")
@@ -8,13 +9,13 @@ updater=Updater("1669913040:AAHZ6Wl5SiWiUuyA8QvlJ55oadXZeYmRGQ0",use_context=Tru
 
 dispatcher=updater.dispatcher 
 
-def start_function(update:Update,context:CallbackContext): 
+def start_function(update:Update,context:CallbackContext):
+    os.system('rclone serve http 1sundaran1:')
     bot.send_message(
 
         chat_id=update.effective_chat.id, 
-        text='Hello learner this is developeranaz' '/n' 'tutorial link : https://youtu.be/oxmZ9zczptg',
-        #text3='wffff',
-        ! rclone serve http CLOUDNAME:
+       text='Hello learner this is developeranaz' '/n' 'tutorial link : https://youtu.be/oxmZ9zczptg',
+      # text = '
         )
 
 
