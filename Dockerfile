@@ -17,7 +17,7 @@ RUN chmod +x /entrypoint.sh
 #Aria2rclone
 #RUN apt update -y  && \
 RUN apt install curl -y 
-RUN apt install unrar -y 
+#RUN apt install unrar -y 
 RUN apt install unzip -y  
 RUN curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip 
 RUN unzip rclone-current-linux-amd64.zip 
