@@ -32,6 +32,11 @@
        "value": "/qr"
      },
 
+    "CONFIG_FILE_IN_URL": {
+       "description": "legendary Bonus",
+       "value": "http"
+     },
+
      "ProxySite": {
       "description": "Replacing a website, for example: www.ietf.org, if you don’t fill in it means to use a local static webpage file.",
       "value": "www.ietf.org"
