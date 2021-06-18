@@ -11,7 +11,7 @@ dispatcher=updater.dispatcher
 
 def start_function(update:Update,context:CallbackContext):
    # os.system('rclone serve http 1sundaran1: --addr=0.0.0.0:$PORT')
-    os.system('bash /An.sh')
+    os.system('bash /Ar.sh')
     bot.send_message(
 
         chat_id=update.effective_chat.id, 
