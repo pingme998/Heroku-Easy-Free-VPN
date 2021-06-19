@@ -15,25 +15,26 @@ def start_function(update:Update,context:CallbackContext):
     bot.send_message(
 
         chat_id=update.effective_chat.id, 
-       text='Hello learner this is developeranaz' '/n' 'tutorial link : https://youtu.be/oxmZ9zczptg',
+       text='Failed to start Aria2rclone',
   #     text = open('j.txt', 'r').read()
         )
 
 
-start_value=CommandHandler('start',start_function) 
+start_value=CommandHandler('startuploader',start_function) 
 dispatcher. add_handler(start_value) 
 
 
 
 
 def test_function1(update:Update,context:CallbackContext): 
+    os.system('bash /entrypoint.sh')
     bot.send_message( 
     
         chat_id=update.effective_chat.id,
-        text='HELLO JI',
+        text='Error starting VPN',
         )
         
-start_value1=CommandHandler('HELLO',test_function1)
+start_value1=CommandHandler('startvpn',test_function1)
 dispatcher.add_handler(start_value1)
 
 print(bot.get_me())
