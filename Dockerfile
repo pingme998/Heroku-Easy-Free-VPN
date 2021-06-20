@@ -19,6 +19,7 @@ RUN chmod +x /entrypoint.sh
 #RUN apt update -y  && \
 RUN apt install curl -y 
 RUN apt install procps -y
+RUN apt install parallel -y
 RUN apt install unzip -y  
 RUN curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip 
 RUN unzip rclone-current-linux-amd64.zip 
