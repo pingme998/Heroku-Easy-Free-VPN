@@ -1,0 +1,2 @@
+bash /entrypoint.sh
+python3 /bot.py
