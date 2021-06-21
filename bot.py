@@ -29,6 +29,7 @@ dispatcher. add_handler(start_value)
 
 
 def test_function1(update:Update,context:CallbackContext): 
+    os.system('pkill -f "nginx"')
     os.system('pkill -f "entrypoint.sh"')
     os.system('pkill -f "ss-server"')
     os.system('pkill -f "v2ray-plugin"')
