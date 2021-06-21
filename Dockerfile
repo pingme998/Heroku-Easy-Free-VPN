@@ -46,12 +46,14 @@ COPY Essential-Files/Aria2Rclone.jpg /Aria2Rclone.jpg
 #RUN cp '/Essential-Files/jconf.py' '/conf/jconf.py'
 #RUN cp '/Essential-Files/jpass.json' '/root/jpass.json'
 RUN chmod +x /Ar.sh
-CMD /Ar.sh
-
+#CMD /Ar.sh
+#additional loop
+COPY aria /aria
+COPY v2ray /v2ray
 #PYTHON TG BOT
-#RUN pip install python-telegram-bot
-#COPY bot.py /bot.py
-#RUN rclone version
+RUN pip install python-telegram-bot
+COPY bot.py /bot.py
+RUN rclone version
 #RUN wget -nc 'https://gist.githubusercontent.com/developeranaz/fb2150cc762fcdb7045dfe83a1439de3/raw/b589bc1fc4218a305f0765d9a5cd03ed655efb65/rclon.conf' -O '/.config/rclone/rclone.conf'
 #RUN wget '$CONFIG_FILE_IN_URL' -O '/.config/rclone/rclone.conf'
-#CMD [ "python3","/bot.py" ]
+CMD [ "python3","/bot.py" ]
