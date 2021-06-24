@@ -44,5 +44,14 @@ start_value1=CommandHandler('HELLO',test_function1)
 dispatcher.add_handler(start_value1)
 
 print(bot.get_me())
+def test_function2(update:Update,context:CallbackContext): 
 
+    bot.send_message( 
+    
+        chat_id=update.effective_chat.id,
+        text='Killed',
+        )
+        
+start_value2=CommandHandler('kill',test_function2)
+dispatcher.add_handler(start_value2)
 updater.start_polling() 
